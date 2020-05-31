@@ -17,8 +17,8 @@ nav #box {
   width: 1200px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 204px 351px 398px 120px;
-      grid-template-columns: 204px 351px 398px 120px;
+  -ms-grid-columns: 204px 351px 398px 120px 110px;
+      grid-template-columns: 204px 351px 398px 120px 110px;
 }
 
 nav #box #link {
@@ -26,6 +26,9 @@ nav #box #link {
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 nav #box #link a {
@@ -34,16 +37,107 @@ nav #box #link a {
   color: white;
 }
 
+nav #box #link a:nth-child(2) {
+  text-align: center;
+}
+
+nav #box #link a:nth-child(3) {
+  text-align: right;
+}
+
 nav #box #social {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+nav #box #social a:nth-child(2) {
+  text-align: right;
 }
 
 #banner {
   background-image: url(./img/invalid-name.png);
   width: 100%;
   height: 1280px;
+  display: -ms-grid;
+  display: grid;
+}
+
+#banner #_title {
+  margin: 399px auto 0 auto;
+}
+
+body {
+  background-image: url(./img/paper_texture.png);
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 300;
+  letter-spacing: 9.6px;
+  text-align: center;
+  margin-top: 46px;
+}
+
+#news {
+  width: 1200px;
+  margin: 59px auto 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+}
+
+#news div {
+  width: 380px;
+  background-color: #fff;
+  margin: px;
+  padding: px;
+  text-align: center;
+}
+
+#news div h4 {
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 3.6px;
+  text-align: center;
+  color: #49aa45;
+  margin-top: 40px;
+}
+
+#news div h2 {
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 6px;
+  text-align: center;
+  color: #000000;
+  margin-top: 27px;
+}
+
+#news div hr {
+  width: 325px;
+  margin-left: 25px;
+}
+
+#news div p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.88;
+  letter-spacing: 4.8px;
+  text-align: left;
+  color: #333333;
+  margin-top: 28px;
+  padding-left: 30px;
+}
+
+#news div img {
+  width: 325px;
+  height: 325px;
+  margin: 31px 0;
 }
 /*# sourceMappingURL=style.css.map */
