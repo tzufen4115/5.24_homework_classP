@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 微軟正黑體;
+    box-sizing: border-box;
+}
+nav{
+    // 導覽列固定
+    position: fixed;
+    width: 1920px;
+    #box{
+        // 導覽列至中對齊+切版
+        margin: 59px auto 0;
+        width: 1200px;
+        display: grid;
+        grid-template-columns: 204px 351px 398px 120px;
+        
+        // link再切版
+        #link{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            a{
+                font-size: 18pt;
+                text-decoration: none;
+                color: white;
+            }
+        }
+        #social{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+        }
+    }
+}
+
+#banner{
+    background-image: url(./img/invalid-name.png);
+    width: 100%;
+    height: 1280px;
+    
+}
