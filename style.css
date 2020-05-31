@@ -91,40 +91,39 @@ h1 {
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   text-align: center;
+  grid-gap: 20px;
 }
 
-#news div {
-  width: 380px;
+#news > div {
   background-color: #fff;
-  margin: px;
-  padding: px;
+  padding: 40px 30px;
   text-align: center;
 }
 
-#news div h4 {
+#news > div h4 {
   font-size: 12px;
   font-weight: 300;
   letter-spacing: 3.6px;
   text-align: center;
   color: #49aa45;
-  margin-top: 40px;
 }
 
-#news div h2 {
+#news > div h2 {
   font-size: 22px;
   font-weight: bold;
-  letter-spacing: 6px;
+  letter-spacing: 5.5px;
   text-align: center;
   color: #000000;
   margin-top: 27px;
 }
 
-#news div hr {
-  width: 325px;
-  margin-left: 25px;
+#news > div hr {
+  width: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-#news div p {
+#news > div p {
   font-size: 16px;
   font-weight: 300;
   line-height: 1.88;
@@ -132,13 +131,36 @@ h1 {
   text-align: left;
   color: #333333;
   margin-top: 28px;
-  padding-left: 30px;
+  margin-bottom: 15px;
 }
 
-#news div img {
-  width: 325px;
-  height: 325px;
-  margin: 31px 0;
+#news > div img {
+  width: 100%;
+}
+
+#news > div div {
+  position: relative;
+  font-size: 0;
+}
+
+#news > div div::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  opacity: 0;
+  z-index: 1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#news > div:hover hr {
+  width: 100%;
+}
+
+#news > div:hover div::before {
+  opacity: 0.5;
 }
 
 #product {
@@ -197,7 +219,7 @@ h1 {
 #concept img {
   width: 620px;
   height: 420;
-  border: solid 5px #fff;
+  border: solid 10px #fff;
 }
 
 #concept #concept-p {

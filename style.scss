@@ -87,12 +87,11 @@ h1{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     text-align: center;
-
-    div{
-        width: 380px;
+    grid-gap: 20px;
+    
+    >div{
         background-color: #fff;
-        margin: px;
-        padding: px;
+        padding: 40px 30px;
         text-align: center;
     
         h4{
@@ -101,21 +100,20 @@ h1{
             letter-spacing: 3.6px;
             text-align: center;
             color: $green;
-            margin-top: 40px;
         }
         h2{
             font-size: 22px;
             font-weight: bold;
-            letter-spacing: 6px;
+            letter-spacing: 5.5px;
             text-align: center;
             color: #000000;
             margin-top: 27px;
         }
         hr{
-            width: 325px;
-            margin-left: 25px;
+            width: 0;
+            transition: 0.5s;
         }
-
+        
         p{
             font-size: 16px;
             font-weight: 300;
@@ -124,12 +122,40 @@ h1{
             text-align: left;
             color: #333333;
             margin-top: 28px;
-            padding-left: 30px;
+            margin-bottom: 15px;
         }
+
         img{
-            width: 325px;
-            height: 325px;
-            margin: 31px 0;
+            width: 100%;
+        }
+
+        div{
+            position: relative;
+            font-size: 0;
+        }
+
+        div::before{
+            // 是指字串，沒有用""
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #000000;
+            opacity: 0;
+            z-index: 1;
+            transition: 0.5s;
+        }
+        
+    
+        // 滑入效果
+        &:hover{
+            hr{
+                width: 100%;
+            }
+
+            div::before{
+                opacity: 0.5;
+            }
         }
     }   
 }
@@ -184,11 +210,11 @@ h1{
     grid-template-columns: 50% 50%;
     width: 1200px;
     margin: 60px auto;
-    
+
     img{
         width: 620px;
         height: 420;
-        border: solid 5px #fff;
+        border: solid 10px #fff;
     }
     #concept-p{
         margin-top: 25px;
